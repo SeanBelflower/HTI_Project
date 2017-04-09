@@ -34,7 +34,7 @@ public class Die {
     }
    
     //Printing out the Letters.
-    public void displayAllLeters() {
+   /* public void displayAllLeters() {
         
         String newString;
         int i = 0;
@@ -44,6 +44,6 @@ public class Die {
             i++;
         }
         
-    }
+    }*/
         
 }

@@ -1,4 +1,4 @@
-package inputOutput;
+/*package inputOutput;
 
 import static boggle.Boggle.boggleDict;
 import java.io.File;
@@ -19,14 +19,14 @@ public class ReadDataFile {
     
     
     //ReadDataFile's constructor
-    public ReadDataFile(String inFile) {
+  /*  public ReadDataFile(String inFile) {
 
         fileInput = inFile;
 
-    }
+    }*/
     
     //TemporaryDictionary.txt is being scanned
-    public void populateDictionary() throws IOException {
+    /*public void populateDictionary() throws IOException {
         
         //Temporary String Holder
         String temp;
@@ -109,3 +109,4 @@ public class ReadDataFile {
     }
 
 }
+*/

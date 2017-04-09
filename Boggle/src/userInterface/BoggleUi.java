@@ -43,13 +43,14 @@ public class BoggleUi extends JFrame {
     boolean[] pressTrack = new boolean[16];
     boolean[] letterCount = new boolean[16];
     private static JPanel bottomPanel;
-    private static int timeSecs = 180;
+    private static int timeSecs = 30;
     int sec = timeSecs % 60;
     int min = timeSecs / 60;
     private static int scoreAmount = 20;
     Timer timer;
     TimerListener clocky = new TimerListener();
     Board diceBoard = new Board(boggleDice);
+   // boggleDice
     //public static JDialog dubplicate; 
 
     //Constructor
@@ -98,7 +99,7 @@ public class BoggleUi extends JFrame {
         scrollPane = new JScrollPane(txtArea);
 
         //Setting up the timer
-        time = new JLabel(min + ":0" + sec);
+        time = new JLabel(min + ":" + sec);
         time.setFont(new Font("Times New Roman", 1, 36));
         time.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -139,6 +140,7 @@ public class BoggleUi extends JFrame {
         gridBag.gridy = 1;
         nextPanel.add(time, gridBag);
         time.setPreferredSize(timerSize);
+        
 
         //Position for shake button
         gridBag.gridx = 0;
@@ -183,7 +185,7 @@ public class BoggleUi extends JFrame {
                 if (shakeCheck == true) {
                     timer.stop();
                 }
-                timeSecs = 180;
+                timeSecs = 60;
                 sec = timeSecs % 60;
                 min = timeSecs / 60;
                 if (sec < 10) {
@@ -767,9 +769,9 @@ public class BoggleUi extends JFrame {
                     }
 
 
-                    JOptionPane.showMessageDialog(frame, "Checking words found by CPU...", "Boggle", JOptionPane.INFORMATION_MESSAGE);     
+                    JOptionPane.showMessageDialog(frame, "Congratulations <Player Name> you are the Winner!", "Boggle", JOptionPane.INFORMATION_MESSAGE);     
 
-                    int helper;
+                   /* int helper;
                     ArrayList<Integer> cpuWordInt = new ArrayList<>();
                     Random rand = new Random();
                     int i = rand.nextInt(wordKeep.size()) + 1;
@@ -845,7 +847,7 @@ public class BoggleUi extends JFrame {
                     }
                    
                     JOptionPane.showMessageDialog(frame, "            GAME OVER", "Boggle", JOptionPane.WARNING_MESSAGE);
-                }
+                */}
             }
 
         };
@@ -865,14 +867,14 @@ public class BoggleUi extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             boolean result = false;
-            String finder = wordString;
+          //  String finder = wordString;
 
-            for (String string : boggleDict) { //Checking if word is in Dictionary
+          /*  for (String string : boggleDict) { //Checking if word is in Dictionary
                 if (finder.equalsIgnoreCase(string)) {
                     result = true;
                 }
-            }
-            boolean result1 = true;//Checking if word is already registered
+            }*/
+           /* boolean result1 = true;//Checking if word is already registered
             for (String track : wordKeep) {
                 if (finder.equalsIgnoreCase(track)) {
                     result1 = false;
@@ -909,8 +911,8 @@ public class BoggleUi extends JFrame {
                     scoreAmount = scoreAmount + 11;
                 }
                 score.setText(String.valueOf(scoreAmount));
-            }
-            result = false;
+            }*/
+           // result = false;
             int x = 0;
             for (x = 0; x < 16; x++) {
                 spot[x].setEnabled(true);
