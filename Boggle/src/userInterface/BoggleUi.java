@@ -46,7 +46,7 @@ public class BoggleUi extends JFrame {
     private static int timeSecs = 180;
     int sec = timeSecs % 60;
     int min = timeSecs / 60;
-    private static int scoreAmount = 0;
+    private static int scoreAmount = 20;
     Timer timer;
     TimerListener clocky = new TimerListener();
     Board diceBoard = new Board(boggleDice);
@@ -178,7 +178,7 @@ public class BoggleUi extends JFrame {
                 currWord.setText("");
                 taylorSwift.setEnabled(true);
                 wordKeep.clear();
-                scoreAmount = 0;
+                scoreAmount = 20;
                 score.setText(String.valueOf(scoreAmount));
                 if (shakeCheck == true) {
                     timer.stop();
@@ -701,7 +701,7 @@ public class BoggleUi extends JFrame {
             shakeCheck = true;
             diceBoard.shakeDice(button, spot, buttonPanel);
             wordKeep.clear();
-            scoreAmount = 0;
+            scoreAmount = 20;
             score.setText(String.valueOf(scoreAmount));
             txtArea.setText("");
             wordString = "";
