@@ -124,23 +124,23 @@ public class BoggleUi extends JFrame {
 
         //Position for each panel
         buttonPanel.setPreferredSize(buttSize);
-        firstPanel.add(BorderLayout.LINE_START, buttonPanel);
+        firstPanel.add(BorderLayout.EAST, buttonPanel);
         firstPanel.add(BorderLayout.PAGE_START, menuBar);
         firstPanel.add(BorderLayout.SOUTH, bottomPanel);
 
         //Rearranging the right side of the UI
-        //Position for text area
-        gridBag.gridx = 0;
-        gridBag.gridy = 0;
-        scrollPane.setPreferredSize(textLength);
-        nextPanel.add(scrollPane, gridBag);
-
+        
         //Position for timer
         gridBag.gridx = 0;
-        gridBag.gridy = 1;
+        gridBag.gridy = 0;
         nextPanel.add(time, gridBag);
         time.setPreferredSize(timerSize);
         
+        //Position for text area
+        gridBag.gridx = 0;
+        gridBag.gridy = 1;
+        scrollPane.setPreferredSize(textLength);
+        nextPanel.add(scrollPane, gridBag);
 
         //Position for shake button
         gridBag.gridx = 0;
@@ -151,7 +151,7 @@ public class BoggleUi extends JFrame {
         //Labels
         buttonPanel.setBorder(BorderFactory.createTitledBorder("Boggle Board"));
         bottomPanel.setBorder(BorderFactory.createTitledBorder("Current Word"));
-        scrollPane.setBorder(BorderFactory.createTitledBorder("Enter Words Found"));
+        scrollPane.setBorder(BorderFactory.createTitledBorder("Words Found"));
         time.setBorder(BorderFactory.createTitledBorder("Time Left"));
         currWord.setBorder(BorderFactory.createTitledBorder("Current Word"));
         score.setBorder(BorderFactory.createTitledBorder("Score"));
