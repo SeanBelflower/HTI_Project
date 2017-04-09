@@ -37,7 +37,7 @@ public final class Board {
 
             //Loops to make all 6 sides
             while (k < NUMBER_OF_SIDES) {
-                String temp = (char)((Math.random() * 27) + 65) + ""; 
+                String temp = (char)((int)(Math.random() * 27) + 65) + ""; 
                 helper.addLetter(temp);
 
              //   j++;
