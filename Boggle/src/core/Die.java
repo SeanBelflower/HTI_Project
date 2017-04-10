@@ -32,18 +32,4 @@ public class Die {
     public void addLetter(String helper) {
         diceLetters.add(helper);
     }
-   
-    //Printing out the Letters.
-   /* public void displayAllLeters() {
-        
-        String newString;
-        int i = 0;
-        
-        while (i < NUMBER_OF_SIDES) {
-            System.out.print(diceLetters.get(i) + " ");
-            i++;
-        }
-        
-    }*/
-        
 }

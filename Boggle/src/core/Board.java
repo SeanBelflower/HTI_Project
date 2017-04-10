@@ -17,7 +17,6 @@ public final class Board {
     ArrayList<Die> diceObjects = new ArrayList<>();
 
     //Constructor for Board
-    //ArrayList<String> boggleDice
     public Board(ArrayList<String> boggleDice) {
         diceData = boggleDice;
         this.populateDice();
@@ -37,16 +36,10 @@ public final class Board {
 
             //Loops to make all 6 sides
             while (k < NUMBER_OF_SIDES) {
-                String temp = (char)((int)(Math.random() * 27) + 65) + ""; 
+                String temp = (char)((int)(Math.random() * 26) + 65) + ""; 
                 helper.addLetter(temp);
-
-             //   j++;
                 k++;
             }
-            //Print out each line of letters for the Die.
-           // System.out.print("Die " + (i + 1) + ": ");
-         //   helper.displayAllLeters();
-           // System.out.println();
 
             diceObjects.add(helper);
             i++;
@@ -61,15 +54,7 @@ public final class Board {
         buttonPanel.removeAll();
         buttonPanel.revalidate();
 
-        //Title Boggle Board to be printed.
-       // System.out.print("\nBoggle Board");
-        
-        //Organizes letters into a 4x4 table.
-        while (i < NUMBER_OF_DICE) {
-            if(i%GRID==0) {
-         //       System.out.println();
-            }
-         //   System.out.print(diceObjects.get(i).getLetter() + " ");
+        while (i < NUMBER_OF_DICE) {     
             button[i] = new JButton(diceObjects.get(i).getLetter());
             i++;
         }

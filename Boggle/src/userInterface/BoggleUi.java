@@ -50,8 +50,7 @@ public class BoggleUi extends JFrame {
     Timer timer;
     TimerListener clocky = new TimerListener();
     Board diceBoard = new Board(boggleDice);
-   // boggleDice
-    //public static JDialog dubplicate; 
+  
 
     //Constructor
     public BoggleUi(Board diceBoard, ArrayList boggleDict) {
@@ -771,83 +770,7 @@ public class BoggleUi extends JFrame {
 
                     JOptionPane.showMessageDialog(frame, "Congratulations <Player Name> you are the Winner!", "Boggle", JOptionPane.INFORMATION_MESSAGE);     
 
-                   /* int helper;
-                    ArrayList<Integer> cpuWordInt = new ArrayList<>();
-                    Random rand = new Random();
-                    int i = rand.nextInt(wordKeep.size()) + 1;
-                    JTextArea cpuFound = new JTextArea();
-
-                    //Strikethrough Font
-                    StyledDocument docUpdated = txtArea.getStyledDocument();
-                    ArrayList<String> cpuWords = new ArrayList<>();
-                    
-                    Style strikeStyle = docUpdated.addStyle("Strikethrough", null);
-                    StyleConstants.setStrikeThrough(strikeStyle, true);
-                    
-                    cpuFound.setText("");
-                    cpuFound.append("Computer found words: \n\n");
-                    
-                    for (int x = 0; x < i; x++) {
-                    
-                        helper = rand.nextInt(wordKeep.size());
-
-                        while (cpuWordInt.contains(helper)) {
-                            helper = rand.nextInt(wordKeep.size());
-                        }
-                        
-                        cpuWordInt.add(helper);
-                        cpuWords.add(wordKeep.get(cpuWordInt.get(x)));
-                    
-                    }
-
-                    for (int x = 0; x < cpuWords.size(); x++) {
-                        cpuFound.append(cpuWords.get(x) + "\n");
-                    }
-                    
-                    JOptionPane.showMessageDialog(frame, cpuFound, "Boggle", JOptionPane.INFORMATION_MESSAGE);
-                    txtArea.setText("");
-
-                    for (int n = 0; n < wordKeep.size(); n++) {
-                        
-                        if (cpuWords.contains(wordKeep.get(n))) {
-                            try {
-                                docUpdated.insertString(docUpdated.getLength(), wordKeep.get(n) + "\n", strikeStyle);
-                            } catch (Exception ex) {
-                                System.out.println(ex);
-                            }
-                            
-                            if (wordKeep.get(n).length() < 5) {
-                                scoreAmount = scoreAmount - 1;
-                            }
-                            if (wordKeep.get(n).length() == 5) {
-                                scoreAmount = scoreAmount - 2;
-                            }
-                            if (wordKeep.get(n).length() == 6) {
-                                scoreAmount = scoreAmount - 3;
-                            }
-                            if (wordKeep.get(n).length() == 7) {
-                                scoreAmount = scoreAmount - 4;
-                            }
-                            if (wordKeep.get(n).length() > 7) {
-                                scoreAmount = scoreAmount - 11;
-                            }
-                            score.setText(String.valueOf(scoreAmount));
-                        }
-                        else {
-                            
-                            try
-                            {
-                                docUpdated.insertString(docUpdated.getLength(), wordKeep.get(n) + "\n", null);
-                            }
-                            catch(Exception ex)
-                            {
-                                System.out.println(ex);
-                            }
-                        }
-                    }
-                   
-                    JOptionPane.showMessageDialog(frame, "            GAME OVER", "Boggle", JOptionPane.WARNING_MESSAGE);
-                */}
+                   }
             }
 
         };
@@ -867,52 +790,6 @@ public class BoggleUi extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             boolean result = false;
-          //  String finder = wordString;
-
-          /*  for (String string : boggleDict) { //Checking if word is in Dictionary
-                if (finder.equalsIgnoreCase(string)) {
-                    result = true;
-                }
-            }*/
-           /* boolean result1 = true;//Checking if word is already registered
-            for (String track : wordKeep) {
-                if (finder.equalsIgnoreCase(track)) {
-                    result1 = false;
-                }
-            }
-            if (result1 == false) {
-                JOptionPane.showMessageDialog(frame, "This word has already been entered!", "DUPLICATE", JOptionPane.ERROR_MESSAGE);
-            }
-            
-            if (result == true && result1 == true && wordString.length() > 2) {//Evaluate the score
-                wordKeep.add(finder);
-                
-                StyledDocument doc = txtArea.getStyledDocument();
-
-                try {
-                    doc.insertString(doc.getLength(), wordString + "\n", null);
-                } catch (Exception ex) {
-                    System.out.println(ex);
-                }
-
-                if (wordString.length() < 5) {
-                    scoreAmount = scoreAmount + 1;
-                }
-                if (wordString.length() == 5) {
-                    scoreAmount = scoreAmount + 2;
-                }
-                if (wordString.length() == 6) {
-                    scoreAmount = scoreAmount + 3;
-                }
-                if (wordString.length() == 7) {
-                    scoreAmount = scoreAmount + 4;
-                }
-                if (wordString.length() > 7) {
-                    scoreAmount = scoreAmount + 11;
-                }
-                score.setText(String.valueOf(scoreAmount));
-            }*/
-           // result = false;
             int x = 0;
             for (x = 0; x < 16; x++) {
                 spot[x].setEnabled(true);
